@@ -1,5 +1,6 @@
 package com.matheushdb.projectapirestdio.dto.request;
 
+import com.matheushdb.projectapirestdio.entity.Phone;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,6 +25,6 @@ public class PersonDTO {
 
     private LocalDate birthDate;
 
-    private List<PhoneDTO> phoneDTOList;
+    private List<Phone> phoneDTOList;
 
 }
