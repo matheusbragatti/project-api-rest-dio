@@ -1,9 +1,7 @@
 package com.matheushdb.projectapirestdio.controller;
 
 import com.matheushdb.projectapirestdio.dto.request.PersonDTO;
-import com.matheushdb.projectapirestdio.entity.Person;
 import com.matheushdb.projectapirestdio.exception.PersonNotFoundException;
-import com.matheushdb.projectapirestdio.repository.PersonRepository;
 import com.matheushdb.projectapirestdio.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

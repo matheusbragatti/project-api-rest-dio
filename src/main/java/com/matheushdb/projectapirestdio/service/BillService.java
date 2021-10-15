@@ -3,16 +3,12 @@ package com.matheushdb.projectapirestdio.service;
 import com.matheushdb.projectapirestdio.dto.request.BillDTO;
 import com.matheushdb.projectapirestdio.dto.request.PersonDTO;
 import com.matheushdb.projectapirestdio.entity.Bill;
-import com.matheushdb.projectapirestdio.entity.Person;
 import com.matheushdb.projectapirestdio.exception.BillNotFoundException;
 import com.matheushdb.projectapirestdio.exception.PersonNotFoundException;
 import com.matheushdb.projectapirestdio.mapper.BillMapper;
-import com.matheushdb.projectapirestdio.mapper.PersonMapper;
 import com.matheushdb.projectapirestdio.repository.BillRepository;
-import com.matheushdb.projectapirestdio.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 import java.util.stream.Collectors;

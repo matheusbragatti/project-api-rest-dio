@@ -1,7 +1,9 @@
 package com.matheushdb.projectapirestdio.dto.request;
 
-import com.matheushdb.projectapirestdio.entity.Phone;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
