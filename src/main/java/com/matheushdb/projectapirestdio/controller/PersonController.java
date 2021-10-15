@@ -25,17 +25,7 @@ public class PersonController {
     @GetMapping
     public String homePage(){
 
-        return "Hello World";
-    }
-
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public String createPerson(@RequestBody PersonDTO person){
-
-        Long newId = personService.createPerson(person);
-        String result = "New person created with ID= " + newId;
-
-        return result;
+        return "Person API";
     }
 
     @GetMapping("/get")
@@ -50,6 +40,16 @@ public class PersonController {
         return personService.findById(id);
     }
 
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public String createPerson(@RequestBody PersonDTO person){
+
+        Long newId = personService.createPerson(person);
+        String result = "New person created with ID= " + newId;
+
+        return result;
+    }
+
     @DeleteMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteById(@PathVariable Long id) throws PersonNotFoundException{
@@ -58,7 +58,6 @@ public class PersonController {
 
     @PutMapping("/update/{id}")
     public String updateById(@PathVariable Long id, @RequestBody PersonDTO personDTO) throws PersonNotFoundException {
-
 
         return personService.updateById(id, personDTO);
     }

@@ -1,6 +1,7 @@
 package com.matheushdb.projectapirestdio.utils;
 
 import com.matheushdb.projectapirestdio.dto.request.PersonDTO;
+import com.matheushdb.projectapirestdio.dto.request.PhoneDTO;
 import com.matheushdb.projectapirestdio.entity.Person;
 import com.matheushdb.projectapirestdio.entity.Phone;
 
@@ -18,15 +19,15 @@ public class PersonUtils {
         newPerson.setCpf("123");
         newPerson.setBirthDate(LocalDate.now());
 
-        Phone newPhone = new Phone();
+        PhoneDTO newPhone = new PhoneDTO();
         newPhone.setId(1L);
         newPhone.setNumber("123");
         newPhone.setType("mobile");
 
-        List<Phone> phoneList = new ArrayList<>();
+        List<PhoneDTO> phoneList = new ArrayList<>();
         phoneList.add(newPhone);
 
-        newPerson.setPhoneDTOList(phoneList);
+        newPerson.setPhoneList(phoneList);
 
         return newPerson;
     }

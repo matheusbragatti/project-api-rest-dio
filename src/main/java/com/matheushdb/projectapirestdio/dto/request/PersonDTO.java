@@ -25,6 +25,8 @@ public class PersonDTO {
 
     private LocalDate birthDate;
 
-    private List<Phone> phoneDTOList;
+    private List<PhoneDTO> phoneList;
+
+    private List<BillDTO> billList;
 
 }
