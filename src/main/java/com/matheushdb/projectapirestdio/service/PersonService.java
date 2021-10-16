@@ -48,10 +48,11 @@ public class PersonService {
         return returnValue;
     }
 
-    public void delete(Long id) throws PersonNotFoundException {
+    public String delete(Long id) throws PersonNotFoundException {
         Person personToDelete = verifyIfExists(id);
         personRepository.deleteById(id);
 
+        return "Deleted person with id: " + id;
     }
 
     public String updateById(Long id, PersonDTO personDTO) throws PersonNotFoundException {

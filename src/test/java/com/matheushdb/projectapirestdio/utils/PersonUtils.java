@@ -1,7 +1,9 @@
 package com.matheushdb.projectapirestdio.utils;
 
+import com.matheushdb.projectapirestdio.dto.request.BillDTO;
 import com.matheushdb.projectapirestdio.dto.request.PersonDTO;
 import com.matheushdb.projectapirestdio.dto.request.PhoneDTO;
+import com.matheushdb.projectapirestdio.entity.Bill;
 import com.matheushdb.projectapirestdio.entity.Person;
 import com.matheushdb.projectapirestdio.entity.Phone;
 
@@ -29,6 +31,16 @@ public class PersonUtils {
 
         newPerson.setPhoneList(phoneList);
 
+        BillDTO newBill = new BillDTO();
+        newBill.setBillName("Streaming x");
+        newBill.setBillValue(21L);
+        newBill.setId(1L);
+
+        List<BillDTO> billList = new ArrayList<>();
+        billList.add(newBill);
+
+        newPerson.setBillList(billList);
+
         return newPerson;
     }
 
@@ -49,6 +61,16 @@ public class PersonUtils {
         phoneList.add(newPhone);
 
         newPerson.setPhoneList(phoneList);
+
+        Bill newBill = new Bill();
+        newBill.setBillName("Streaming x");
+        newBill.setBillValue(21L);
+        newBill.setId(1L);
+
+        List<Bill> billList = new ArrayList<>();
+        billList.add(newBill);
+
+        newPerson.setBillList(billList);
 
         return newPerson;
     }

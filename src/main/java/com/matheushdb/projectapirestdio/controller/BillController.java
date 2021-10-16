@@ -56,11 +56,6 @@ public class BillController {
         return "Total amount = " + total;
     }
 
-    @PostMapping("/user/add/{id}")
-    public String addBill(@PathVariable Long id, BillDTO billDTO){
-        return null;
-    }
-
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public String createBill(@RequestBody BillDTO billDTO){
